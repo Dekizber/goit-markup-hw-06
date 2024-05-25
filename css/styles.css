@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
-  color: #2e2f42;
+  color: #434455;
   background-color: #fff;
 }
 
@@ -16,8 +16,9 @@ ol {
 /* Logo */
 .logo {
   font-family: "Raleway", sans-serif;
+  font-weight: 700;
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
@@ -53,11 +54,15 @@ ol {
   color: #434455;
 }
 
-.contacts:hover {
+.contacts-link {
+  color: #434455;
+}
+
+.contacts-link:hover {
   color: #404bbf;
 }
 
-.contacts:focus {
+.contacts-link:focus {
   color: #404bbf;
 }
 
@@ -69,14 +74,13 @@ ol {
 .banner {
   font-weight: 700;
   font-size: 56px;
-  line-height: 1.07143;
+  line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
 }
 
 .banner-button {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
@@ -87,26 +91,25 @@ ol {
 }
 
 .banner-button:hover {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #404bbf;
 }
 
 .banner-button:focus {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #404bbf;
 }
 
-/* Our Goal */
+/* 2 section Our Goal */
 .title-name {
+  text-transform: capitalize;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11111;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
 }
 
-.title-h3-header {
+.title-header {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -122,7 +125,7 @@ ol {
   color: #434455;
 }
 
-/* Our Team */
+/* 3 section Our Team */
 .team-section {
   background: #f4f4fd;
 }
