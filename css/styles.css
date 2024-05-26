@@ -4,13 +4,47 @@ body {
   background-color: #fff;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 a {
   text-decoration: none;
 }
 
 ul,
 ol {
+  margin: 0;
+  padding-left: 0;
   list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Header */
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+  margin: 0;
+}
+
+.page-header .container {
+  display: flex;
+  align-items: center;
 }
 
 /* Logo */
@@ -22,6 +56,7 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .logo-studio {
@@ -29,12 +64,26 @@ ol {
 }
 
 /* Menu navigation */
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.menu-nav-links,
+.menu-contacts-links {
+  display: flex;
+  gap: 40px;
+}
+
 .menu-nav {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: block;
 }
 
 .menu-nav:hover {
@@ -52,6 +101,7 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  margin-left: auto;
 }
 
 .contacts-link {
@@ -68,6 +118,8 @@ ol {
 
 /* 1 section/banner/button */
 .first-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background: #2e2f42;
 }
 
@@ -78,6 +130,10 @@ ol {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .banner-button {
@@ -88,6 +144,13 @@ ol {
   letter-spacing: 0.04em;
   color: #fff;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 
 .banner-button:hover {
@@ -99,6 +162,24 @@ ol {
 }
 
 /* 2 section Our Goal */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.title-name-hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .title-name {
   text-transform: capitalize;
   font-weight: 700;
@@ -109,40 +190,124 @@ ol {
   color: #2e2f42;
 }
 
+.title-list {
+  display: flex;
+  gap: 24px;
+}
+
+.title-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .title-header {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .title-paragraph {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
 }
 
 /* 3 section Our Team */
+
+.title-name-team {
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.02em;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
+
+.team-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
+}
+
 .team-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background: #f4f4fd;
 }
 
-/* Footer */
-.team-item {
-  background: #fff;
+.title-header-name {
+  color: #2e2f42;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 8px;
 }
+
+.center {
+  text-align: center;
+  padding: 0;
+}
+
+.name-workers {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* 4 sect Porfolio */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.team-item-portfolio {
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-container {
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.title-margin {
+  margin-bottom: 8px;
+}
+/* Footer */
+
 .footer-background {
+  padding: 100px 0;
   background: #2e2f42;
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
 }
 .logo-studio-white {
   color: #f4f4fd;
 }
 .footer-description {
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
