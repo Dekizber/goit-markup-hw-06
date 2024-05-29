@@ -32,14 +32,15 @@ img {
 .container {
   max-width: 1158px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
 }
 
 /* Header */
 .page-header {
   border-bottom: 1px solid #e7e9fc;
   margin: 0;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header .container {
@@ -64,7 +65,6 @@ img {
 }
 /* #region navigation */
 
-/* Menu navigation */
 .navigation {
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@ img {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 1px;
+  bottom: -1px;
   height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
@@ -125,7 +125,7 @@ img {
 /* #endregion navigation */
 
 /* #region contacts */
-/* Contacts */
+
 .contacts {
   font-style: normal;
   font-size: 16px;
@@ -151,7 +151,7 @@ img {
 /* #endregion contacts */
 
 /* #region 1 section Title */
-/* 1 section/banner/button */
+
 .first-section {
   padding-top: 188px;
   padding-bottom: 188px;
@@ -159,7 +159,10 @@ img {
   margin-right: auto;
   margin-left: auto;
   max-width: 1440px;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -208,7 +211,6 @@ img {
 
 /* #region 2 section Goal */
 
-/* 2 section Our Goal */
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -282,7 +284,6 @@ img {
 
 /* #region 3 section Team */
 
-/* 3 section Our Team */
 .team-section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -350,8 +351,12 @@ img {
   background-color: #404bbf;
 }
 
+.social-link:focus {
+  background-color: #404bbf;
+}
+
 .social-icon {
-  fill: #fff;
+  fill: #f4f4fd;
 }
 
 .name-workers > .title-paragraph {
@@ -364,7 +369,6 @@ img {
 
 /* #region 4 section Portfolio*/
 
-/* 4 sect Porfolio */
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -425,8 +429,6 @@ img {
 
 /* #region footer */
 
-/* Footer */
-
 .footer-background {
   padding: 100px 0;
   background: #2e2f42;
@@ -468,7 +470,7 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
@@ -479,6 +481,10 @@ img {
 }
 
 .social-link.footer:hover {
+  background-color: #31d0aa;
+}
+
+.social-link.footer:focus {
   background-color: #31d0aa;
 }
 /* #endregion footer */
