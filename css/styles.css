@@ -35,7 +35,7 @@ img {
   padding: 0 15px;
 }
 
-/* Header */
+/* #region Header */
 .page-header {
   border-bottom: 1px solid #e7e9fc;
   margin: 0;
@@ -63,6 +63,9 @@ img {
 .logo-studio {
   color: #2e2f42;
 }
+
+/* #endregion Header */
+
 /* #region navigation */
 
 .navigation {
