@@ -500,56 +500,70 @@ img {
   background-color: #31d0aa;
 }
 
+.subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
 .subscribe-label {
   display: block;
   color: #fff;
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.32px;
-  margin-bottom: 16px;
 }
 
-.footer-subscribe input {
+.subscribe-input {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  color: #ffffff;
   width: 264px;
   height: 40px;
-  background: var(--NAVY-BLUE, #2e2f42);
+  background-color: transparent;
   border-radius: 4px;
-  border: 1px solid var(--WHITE, #fff);
+  border: 1px solid #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-subscribe input:focus {
+.subscribe-input::placeholder {
+  color: var(--WHITE, #fff);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  padding: 8px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.subscribe-input:focus {
   border: 1px solid var(--WHITE, #4d5ae5);
 }
 
-.subscribe-input {
-  margin-right: 24px;
-}
-.subscribe-input::placeholder {
-  color: var(--WHITE, #fff);
-  font-family: Roboto;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 200% */
-  letter-spacing: 0.48px;
-  padding: 8px 16px;
-}
 .subscribe-button {
-  display: inline-flex;
+  display: flex;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  font-family: "Roboto", sans-serif;
+  border: none;
   border-radius: 4px;
-
   background: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   min-width: 165px;
   height: 40px;
@@ -567,6 +581,7 @@ img {
 
 .subscribe-icon {
   fill: #ffffff;
+  margin-left: 16px;
 }
 /* #endregion footer */
 /* #region modal */
@@ -583,7 +598,8 @@ img {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -593,13 +609,18 @@ img {
 
 .modal {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--DAIRY, #fcfcfc);
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   width: 408px;
   min-height: 584px;
   overflow-y: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button {
@@ -615,17 +636,21 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
+  padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover,
 .modal-close-button:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-button-svg {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover .modal-close-button-svg {
@@ -643,13 +668,16 @@ img {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 
 .modal-form {
   margin-bottom: 8px;
+}
+.modal-form-comment {
+  margin-bottom: 16px;
 }
 
 .modal-form-label {
@@ -659,7 +687,7 @@ img {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.48px;
   margin-bottom: 4px;
 }
@@ -674,16 +702,13 @@ img {
   border-radius: 4px;
   border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
   outline: none;
-  padding: 11px 0px 11px 32px;
+  padding-left: 38px;
   background-color: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus {
-  border-color: #4d5ae5;
-}
-
-.modal-form-textarea:focus {
   border-color: #4d5ae5;
 }
 
@@ -693,14 +718,23 @@ img {
 
 .modal-form-textarea {
   width: 100%;
-  min-height: 120px;
+  height: 120px;
   max-height: 600px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
-  outline: none;
-  padding: 11px 0px 11px 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  padding: 8px 16px;
   background-color: transparent;
   resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-textarea:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-form-textarea::placeholder {
@@ -734,7 +768,7 @@ form label {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.48px;
   cursor: pointer;
   width: 100%;
@@ -747,22 +781,22 @@ input[type="checkbox"]:checked + .checkbox-label > .checkbox-privacy {
 }
 
 input[type="checkbox"]:checked + .checkbox-label > .checkbox-privacy > svg {
-  fill: #ffffff;
-}
-
-.checkbox-svg {
-  fill: transparent;
+  fill: #f4f4fd;
 }
 
 .checkbox-privacy {
+  fill: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
   height: 16px;
-  border-radius: 4px;
+  border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 label > a {
@@ -778,11 +812,16 @@ label > a {
 }
 
 .send-button {
-  display: flex;
+  display: block;
+  min-width: 169px;
+  height: 56px;
   margin-left: auto;
   margin-right: auto;
-  padding: 16px 32px;
   align-items: center;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
   gap: 10px;
   border: none;
   border-radius: 4px;
@@ -793,7 +832,6 @@ label > a {
 }
 
 .send-button-text {
-  color: var(--WHITE, #fff);
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
