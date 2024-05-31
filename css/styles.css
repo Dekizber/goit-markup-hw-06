@@ -512,7 +512,7 @@ img {
   margin-bottom: 16px;
 }
 
-input {
+.footer-subscribe input {
   width: 264px;
   height: 40px;
   background: var(--NAVY-BLUE, #2e2f42);
@@ -520,6 +520,7 @@ input {
   border: 1px solid var(--WHITE, #fff);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
+
 .subscribe-input {
   margin-right: 24px;
 }
@@ -567,9 +568,8 @@ input {
 }
 /* #endregion footer */
 /* #region modal */
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-
+.backdrop {
+  background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
   position: fixed;
   top: 0;
   left: 0;
@@ -579,24 +579,80 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms ease-in-out;
 }
 
-.modal-overlay.is-open {
+.backdrop.is-open {
   opacity: 1;
   pointer-events: auto;
 }
 
 .modal {
-  background-color: #fff;
+  position: absolute;
+  background-color: var(--DAIRY, #fcfcfc);
   border-radius: 4px;
-  padding: 16px;
+  padding: 72px 24px 24px 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  max-width: 480px;
-  max-height: 80%;
+  width: 408px;
+  min-height: 584px;
   overflow-y: auto;
 }
-/* #endregion modal */
+
+.modal-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+}
+
+.modal-close-button-svg {
+  fill: #2e2f42;
+}
+
+.modal-title {
+  color: var(--NAVY-BLUE, #2e2f42);
+  text-align: center;
+
+  /* Body Medium */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+.backdrop input {
+  display: block;
+}
+
+.privacy {
+  color: var(--IRIS, #4d5ae5);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-decoration-line: underline;
+}
+
+.send-button {
+  color: var(--WHITE, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 32px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: var(--IRIS, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+} /* #endregion modal */
