@@ -745,8 +745,15 @@ input[type="checkbox"]:checked + .checkbox-label > .checkbox-privacy {
   border: transparent;
 }
 
-.checkbox-label svg {
+input[type="checkbox"]:checked
+  + .checkbox-label
+  > .checkbox-privacy
+  > .checkbox-svg {
   fill: #ffffff;
+}
+
+.checkbox-svg {
+  fill: transparent;
 }
 
 .checkbox-privacy {
