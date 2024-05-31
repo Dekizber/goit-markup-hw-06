@@ -686,6 +686,10 @@ img {
   border-color: #4d5ae5;
 }
 
+.modal-form-textarea:focus {
+  border-color: #4d5ae5;
+}
+
 .modal-form-input:focus + .modal-form-svg {
   fill: #4d5ae5;
 }
