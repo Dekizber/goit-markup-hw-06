@@ -31,13 +31,13 @@ img {
 
 .container {
   max-width: 320px;
-  margin: 0 auto;
   padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    margin: 0 auto;
   }
 }
 
@@ -85,8 +85,7 @@ img {
   align-items: center;
 }
 
-.menu-nav-links,
-.menu-contacts-links {
+.menu-nav-links {
   display: flex;
   gap: 40px;
 }
@@ -142,14 +141,29 @@ img {
 /* #region contacts */
 
 .contacts {
-  display: flexbox;
-
-  /* font-style: normal;
+  font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  margin-left: auto; */
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    font-size: 12px;
+  }
+}
+
+.menu-contacts-links {
+  display: flex;
+  gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-contacts-links {
+    display: inline;
+  }
 }
 
 .contacts-link {
