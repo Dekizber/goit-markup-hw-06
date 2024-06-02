@@ -781,6 +781,25 @@ img {
   background-color: #31d0aa;
 }
 
+.footer-subscribe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+@media (min-width: 768px) {
+  .footer-subscribe {
+  }
+}
+
+@media (min-width: 1158px) {
+  .footer-subscribe {
+    margin-right: 80px;
+  }
+}
+
 .subscribe-title {
   font-weight: 500;
   font-size: 16px;
@@ -823,8 +842,21 @@ img {
 
 .subscribe-form {
   display: flex;
-  justify-content: flex-start;
   gap: 24px;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .subscribe-form {
+  }
+}
+
+@media (min-width: 1158px) {
+  .subscribe-form {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+  }
 }
 
 .subscribe-input:focus {
