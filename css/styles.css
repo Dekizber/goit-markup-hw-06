@@ -242,9 +242,14 @@ img {
 
 /* #region 2 section Goal */
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.section-goal {
+  padding: 96px 16px;
+}
+
+@media screen and (min-width: 1158px) {
+  .section-goal {
+    padding: 0 120px;
+  }
 }
 
 .box-icon {
@@ -290,7 +295,51 @@ img {
 
 .title-list {
   display: flex;
-  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 72px;
+}
+
+@media (min-width: 768px) {
+  .title-list {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 8px;
+  }
+  .title-list {
+    flex-basis: calc((100% - 10px) / 2);
+  }
+}
+
+@media (min-width: 1158px) {
+  .title-list {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+@media not (max-width: 768px) {
+  .box-icon {
+  }
+}
+
+@media (max-width: 1158px) {
+  .box-icon {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .title-item {
