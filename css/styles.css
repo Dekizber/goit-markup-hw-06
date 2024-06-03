@@ -32,7 +32,7 @@ img {
 .container {
   max-width: 320px;
   padding: 0 16px;
-  margin: ;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -203,15 +203,30 @@ img {
 
 .banner {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
   max-width: 496px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .banner {
+    margin-bottom: 48px;
+  }
 }
 
 .banner-button {
@@ -251,7 +266,7 @@ img {
 
 @media screen and (min-width: 1158px) {
   .section-goal {
-    padding: 0 120px;
+    padding: 120px 0;
   }
 }
 
@@ -661,6 +676,7 @@ img {
 
 @media (min-width: 768px) {
   .footer-background {
+    padding: 96px 0 96px 108px;
   }
 }
 
@@ -676,18 +692,15 @@ img {
 }
 @media (min-width: 768px) {
   .footerflex {
-    display: flex;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
 @media (min-width: 1158px) {
   .footerflex {
     align-items: baseline;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
   }
@@ -713,6 +726,12 @@ img {
   color: #4d5ae5;
 }
 
+@media (min-width: 768px) {
+  .logo-footer {
+    justify-content: left;
+  }
+}
+
 .logo-studio-white {
   color: #f4f4fd;
 }
@@ -723,6 +742,7 @@ img {
 
 @media (min-width: 768px) {
   .footer-text-desc {
+    margin-right: 24px;
   }
 }
 
@@ -749,6 +769,7 @@ img {
 
 @media (min-width: 768px) {
   .social-media-footer {
+    align-items: flex-start;
   }
 }
 
@@ -756,7 +777,6 @@ img {
   .social-media-footer {
     margin-right: 80px;
     margin-bottom: 0;
-    align-items: flex-start;
   }
 }
 
@@ -793,11 +813,16 @@ img {
 
 @media (min-width: 768px) {
   .footer-subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
 @media (min-width: 1158px) {
   .footer-subscribe {
+    flex-direction: row;
+
     margin-right: 80px;
     justify-content: flex-start;
   }
@@ -810,6 +835,14 @@ img {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+}
+
+@media (min-width: 768px) and (max-width: 1158px) {
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .subscribe-label {
@@ -852,15 +885,15 @@ img {
 
 @media (min-width: 768px) {
   .subscribe-form {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
   }
 }
 
 @media (min-width: 1158px) {
   .subscribe-form {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    gap: 24px;
     align-items: normal;
   }
 }
