@@ -34,7 +34,8 @@ img {
 }
 
 .container {
-  max-width: 320px;
+  min-width: 320px;
+  max-width: 375px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -808,9 +809,16 @@ img {
 .container.footerflex {
   padding: 14px;
 }
-@media (min-width: 768px) and (max-width: 1158px) {
+@media (min-width: 768px) {
   .container.footerflex {
-    padding: 0;
+    padding: 0 100px;
+  }
+
+  @media only screen and (min-width: 1158px) {
+    .container.footerflex {
+      padding: 14px;
+      justify-content: flex-start;
+    }
   }
 }
 .logo-footer {
@@ -905,10 +913,10 @@ img {
 
 .footer-subscribe {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -916,6 +924,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 
