@@ -735,6 +735,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 72px;
 }
 
 @media (min-width: 768px) {
@@ -745,6 +746,7 @@ img {
 @media (min-width: 1158px) {
   .social-media-footer {
     margin-right: 80px;
+    margin-bottom: 0;
     align-items: flex-start;
   }
 }
@@ -800,6 +802,7 @@ img {
   color: #fff;
   margin-bottom: 16px;
 }
+
 .subscribe-label {
   display: block;
   color: #fff;
@@ -834,7 +837,6 @@ img {
 
 .subscribe-form {
   display: flex;
-  gap: 24px;
   flex-direction: column;
 }
 
@@ -850,6 +852,19 @@ img {
     justify-content: flex-start;
     gap: 24px;
   }
+}
+
+.subscribe-label {
+  color: var(--LIGHT-SLATE, #8e8f99);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 24px;
 }
 
 .subscribe-input:focus {
@@ -1068,7 +1083,7 @@ img {
   margin-bottom: 24px;
 }
 
-form label {
+.modal-form-label {
   color: var(--LIGHT-SLATE, #8e8f99);
   font-family: Roboto;
   font-size: 12px;
