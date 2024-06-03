@@ -212,7 +212,11 @@ img {
 
 @media (min-width: 768px) and (max-width: 1158px) {
   .menu-contacts-links {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 12px;
   }
 }
 
@@ -234,8 +238,7 @@ img {
 /* #region 1 section Title */
 
 .first-section {
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding: 72px 0;
   background: #2e2f42;
   margin-right: auto;
   margin-left: auto;
@@ -262,6 +265,8 @@ img {
 
 @media only screen and (min-width: 768px) {
   .first-section {
+    padding: 112px 0;
+
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -282,6 +287,7 @@ img {
 
 @media only screen and (min-width: 1158px) {
   .first-section {
+    padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -307,7 +313,7 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
+  max-width: 216px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
@@ -319,11 +325,13 @@ img {
     font-size: 56px;
     line-height: 1.07;
     margin-bottom: 36px;
+    max-width: 488px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .banner {
+    max-width: 496px;
     margin-bottom: 48px;
   }
 }
@@ -478,9 +486,14 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  text-align: start;
+  text-align: center;
 }
 
+@media only screen and (min-width: 768px) {
+  .title-header {
+    text-align: left;
+  }
+}
 @media not (max-width: 1158px) {
   .title-header {
     font-weight: 500;
@@ -502,11 +515,11 @@ img {
 @media not (max-width: 1158px) {
   .title-paragraph {
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    margin-bottom: 8px;
   }
 }
 /* #endregion 2 section */
@@ -522,13 +535,13 @@ img {
 
 @media (min-width: 768px) {
   .team-section {
-    padding: 120px 108px;
+    padding: 96px 108px;
   }
 }
 
 @media (min-width: 1158px) {
   .team-section {
-    padding: 96px 28px;
+    padding: 120px 28px;
   }
 }
 
@@ -545,7 +558,7 @@ img {
 
 .title-list-team {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   gap: 72px;
@@ -682,6 +695,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
+  justify-content: center;
   padding-left: 0;
 }
 
@@ -706,7 +720,6 @@ img {
 
 .team-item-portfolio {
   width: 288px;
-  height: 400px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -817,9 +830,7 @@ img {
     justify-content: center;
   }
 }
-.container.footerflex {
-  padding: 14px;
-}
+
 @media (min-width: 768px) {
   .container.footerflex {
     padding: 0;
