@@ -56,9 +56,12 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.page-header .container {
-  display: flex;
-  align-items: center;
+@media only screen and (max-width: 768
+px) {
+  .page-header .container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* Logo */
@@ -71,6 +74,14 @@ img {
   text-transform: uppercase;
   color: #4d5ae5;
   margin-right: 76px;
+  padding: 16.5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    padding: 0;
+    margin-right: 120px;
+  }
 }
 
 .logo-studio {
@@ -86,9 +97,23 @@ img {
   align-items: center;
 }
 
+@media only screen and (max-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .menu-nav-links {
   display: flex;
   gap: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-nav-links {
+    display: none;
+  }
 }
 
 .menu-nav {
@@ -143,16 +168,27 @@ img {
 
 .contacts {
   font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
   color: #434455;
   margin-left: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .contacts {
-    font-size: 12px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .contacts {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin-left: auto;
   }
 }
 
@@ -161,7 +197,7 @@ img {
   gap: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1158px) {
   .menu-contacts-links {
     display: inline;
   }
@@ -1210,3 +1246,25 @@ input[type="checkbox"]:checked + .checkbox-label > .checkbox-privacy {
 }
 
 /* #endregion modal */
+
+/* menu button */
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.menu-btn-icon {
+  display: block;
+}
